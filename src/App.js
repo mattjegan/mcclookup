@@ -21,15 +21,21 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>MCC Look Up</h1>
-        <h2>Look up any <a href="https://en.wikipedia.org/wiki/Merchant_category_code">Merchant Category Code</a></h2>
+        <div className="content">
+          <h1>MCC Look Up</h1>
+          <h2>Look up any <a href="https://en.wikipedia.org/wiki/Merchant_category_code">Merchant Category Code</a></h2>
 
-        <input name="Search" placeholder="Search..." type="number" value={this.state.search} onChange={this.handleInputChange}/>
+          <input name="Search" placeholder="Search..." type="number" value={this.state.search} onChange={this.handleInputChange}/>
 
-        { mccMatch.length !== 0 ? (
-          <p>{mccMatch[0].description}</p>
-        ) : null }
+          { mccMatch.length !== 0 ? (
+            <p>{mccMatch[0].description}</p>
+          ) : null }
+        </div>
 
+        <div className="footer">
+          <a href="https://mattjegan.com">Made by Matt Egan</a>
+          <a href="https://github.com/mattjegan/mcclookup">Fork on GitHub</a>
+        </div>
       </div>
     );
   }
